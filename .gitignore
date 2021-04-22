@@ -1,0 +1,11 @@
+SQLtables/article_keywords_relation_table.csv
+SQLtables/article_tags_relation_table.csv
+SQLtables/articles_table.csv
+SQLtables/authors_of_article.csv
+SQLtables/authors_table.csv
+SQLtables/domain_table.csv
+SQLtables/keywords_table.csv
+SQLtables/meta_article_keywords_relation_table.csv
+SQLtables/meta_keywords_table.csv
+SQLtables/owns_table.csv
+SQLtables/tags_table.csv
