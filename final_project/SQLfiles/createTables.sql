@@ -1,0 +1,11 @@
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS public.article(id integer, content text COLLATE pg_catalog.\"default\", url text COLLATE pg_catalog.\"default\", scraped_at date, inserted_at date, updated_at date, meta_description text COLLATE pg_catalog.\"default\", title text COLLATE pg_catalog.\"default\") WITH (OIDS = FALSE) TABLESPACE pg_default;
+CREATE TABLE IF NOT EXISTS public.article_meta_keywords(article_id integer, meta_keyword text COLLATE pg_catalog.\"default\") WITH (OIDS = FALSE) TABLESPACE pg_default;
+CREATE TABLE IF NOT EXISTS public.authors(name text COLLATE pg_catalog.\"default\") WITH (OIDS = FALSE) TABLESPACE pg_default;
+CREATE TABLE IF NOT EXISTS public.authors_of(article_id integer, author_name text COLLATE pg_catalog.\"default\") WITH (OIDS = FALSE) TABLESPACE pg_default;
+CREATE TABLE IF NOT EXISTS public.domain(name text COLLATE pg_catalog.\"default\") WITH (OIDS = FALSE) TABLESPACE pg_default;
+CREATE TABLE IF NOT EXISTS public.meta_keywords(meta_keyword text COLLATE pg_catalog.\"default\") WITH (OIDS = FALSE) TABLESPACE pg_default;
+CREATE TABLE IF NOT EXISTS public.owns(article_id integer, domain_name text COLLATE pg_catalog.\"default\") WITH (OIDS = FALSE) TABLESPACE pg_default;
+CREATE TABLE IF NOT EXISTS public.types(type text COLLATE pg_catalog.\"default\") WITH (OIDS = FALSE) TABLESPACE pg_default;
+CREATE TABLE IF NOT EXISTS public.article_types(article_id integer,type text COLLATE pg_catalog.\"default\") WITH (OIDS = FALSE) TABLESPACE pg_default;
+COMMIT TRANSACTION;
